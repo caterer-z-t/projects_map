@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# Trigger the workflow on push to the main branch
+on:
+  push:
+    branches:
+      - main  # Or 'main', depending on your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js (you need this if you're building or processing anything)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Install dependencies (if you need any, like Mapbox dependencies)
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # Build the website (if you are using a build step like a static site generator)
+      - name: Build the site
+        run: |
+          # Add build steps if you are using something like Jekyll or other site generators
+          echo "No build step needed for static HTML."
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch to deploy to, typically 'gh-pages'
+          folder: .         # Folder to deploy, use '.' for the root folder
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This token allows deployment
+
