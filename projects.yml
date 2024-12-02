@@ -19,11 +19,10 @@ locations:
       
       - category: "software_project"
         name: "SOM Seq Sim"
+        date: "December 2, 2024"
         url: "https://github.com/caterer-z-t/SOM_Seq_Sim" 
         affiliation: "CSCI 6118: Software Engineering for Scientists"
-        image_path: https://raw.githubusercontent.com/caterer-z-t/SOM_Seq_Sim/00ad2c6650b4883f197ab86283e0dfc1d6743cd7/assets/som_package_logo.png
-        # documentation: https://som-seq-sim.readthedocs.io/en/latest/
-
+        image_path: https://raw.githubusercontent.com/caterer-z-t/SOM_Seq_Sim/586ce8333c6596a8862a3179b618543e47774e49/assets/som_package_logo.png
   # Amgen Scholar 2023
   - city: "Los Angeles, CA"
     lat: 34.06969123198319
